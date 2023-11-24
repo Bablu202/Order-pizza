@@ -13,7 +13,8 @@ export default function DeleteItem({ pizzaId }) {
       type="small"
     >
       <span className="flex items-center">
-        Remove .. <CiPizza />
+        Remove-
+        <CiPizza />
       </span>
     </Button>
   );

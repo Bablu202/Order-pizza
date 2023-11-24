@@ -10,16 +10,16 @@ export default function UpdatingItemQuantity({ pizzaId, currentQuantity }) {
         onClick={() => {
           dispatch(decreaseItemQuantity(pizzaId));
         }}
-        type="round"
+        type="count"
       >
         -
       </Button>
       <span>{currentQuantity}</span>
       <Button
+        type="count"
         onClick={() => {
           dispatch(increateItemQuantity(pizzaId));
         }}
-        type="round"
       >
         +
       </Button>
