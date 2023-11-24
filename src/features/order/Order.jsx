@@ -8,6 +8,7 @@ import {
   formatDate,
 } from '../../utils/helpers';
 import { useEffect } from 'react';
+import UpdateOrder from './UpdateOrder';
 
 function Order() {
   const order = useLoaderData();
@@ -38,7 +39,7 @@ function Order() {
   return (
     <div className=" space-y-8 px-4 py-6">
       <div className="flex flex-wrap items-center justify-between">
-        <h2 className="text-xl font-semibold">Status</h2>
+        <h2 className="text-xl font-semibold">Status {}</h2>
         <div className="mr-5 space-x-2">
           {priority && (
             <span
@@ -97,6 +98,7 @@ function Order() {
           To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
         </p>
       </div>
+      {!priority && <UpdateOrder order={order} />}
     </div>
   );
 }
